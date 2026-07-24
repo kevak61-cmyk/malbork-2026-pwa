@@ -1,0 +1,14 @@
+{
+  "name": "Wyprawa Fotograficzna Malbork 2026",
+  "short_name": "Malbork 2026",
+  "description": "Offline'owa aplikacja prowadząca podczas fotograficznej wyprawy po Malborku.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f1e8",
+  "theme_color": "#24352f",
+  "orientation": "portrait-primary",
+  "icons": [
+    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#24352f">
+  <meta name="description" content="Wyprawa Fotograficzna Malbork 2026">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <title>Malbork 2026</title>
+</head>
+<body>
+  <header>
+    <div><p class="eyebrow">Wyprawa fotograficzna</p><h1>Malbork 2026</h1></div>
+    <span id="offlineBadge" class="badge">Ładowanie</span>
+  </header>
+  <main>
+    <section id="recoveryBanner" class="card recovery-banner" hidden>
+      <div><p class="eyebrow">Odzyskanie sesji</p><strong>Poprzednia wyprawa nie została zakończona</strong><p id="recoveryText"></p></div>
+      <div class="recovery-actions"><button id="resumeSessionBtn" class="primary">Wznów sesję</button><button id="discardSessionBtn">Zacznij od nowa</button></div>
+    </section>
+    <section id="readinessCard" class="card readiness-card">
+      <div class="section-heading"><div><p class="eyebrow">Przygotowanie telefonu</p><h2 id="readinessTitle">Kontrola gotowości</h2></div><span id="readinessScore" class="readiness-score">0/5</span></div>
+      <p id="readinessMessage">Aplikacja sprawdza zasoby potrzebne w terenie.</p>
+      <ul class="readiness-list">
+        <li data-readiness="package"><span class="status-dot"></span><div><strong>Pakiet wyprawy</strong><small id="readyPackage">Sprawdzanie integralności</small></div></li>
+        <li data-readiness="offline"><span class="status-dot"></span><div><strong>Praca offline</strong><small id="readyOffline">Sprawdzanie pamięci podręcznej</small></div></li>
+        <li data-readiness="gps"><span class="status-dot"></span><div><strong>Dokładna lokalizacja</strong><small id="readyGps">Wymaga zgody użytkownika</small></div></li>
+        <li data-readiness="storage"><span class="status-dot"></span><div><strong>Trwały zapis</strong><small id="readyStorage">Sprawdzanie pamięci urządzenia</small></div></li>
+        <li data-readiness="audio"><span class="status-dot"></span><div><strong>Dźwięk i mowa</strong><small id="readyAudio">Wymaga krótkiego testu</small></div></li>
+      </ul>
+      <div class="button-grid readiness-actions"><button id="installBtn">Zainstaluj aplikację</button><button id="gpsPermissionBtn">Zezwól na GPS</button><button id="offlineCheckBtn">Sprawdź offline</button><button id="audioTestBtn">Test dźwięku</button><button id="overrideReadinessBtn" class="danger">Uruchom awaryjnie</button></div>
+      <details class="install-help"><summary>Instrukcja instalacji na Androidzie</summary><ol id="installSteps"></ol></details>
+    </section>
+    <section id="integrityCard" class="card compact"><strong>Pakiet RELEASE</strong><span id="integrityStatus">Sprawdzanie integralności…</span></section>
+    <section class="card hero"><div class="stage-number" id="stageNumber">—</div><div><p class="eyebrow" id="stageCategory">Trasa</p><h2 id="stageTitle">Wczytywanie projektu…</h2><p id="stageDescription"></p></div></section>
+    <section class="metrics"><div class="metric"><span>Odległość</span><strong id="distance">—</strong></div><div class="metric"><span>Kierunek</span><strong id="direction">—</strong></div><div class="metric"><span>Plan</span><strong id="schedule">—</strong></div><div class="metric"><span>Postęp</span><strong id="progress">0/10</strong></div></section><section id="navigationAlert" class="card navigation-alert" hidden><strong id="navigationAlertTitle">Nawigacja</strong><span id="navigationAlertText"></span></section>
+    <section class="card map-card">
+      <div class="section-heading"><div><p class="eyebrow">Mapa offline</p><h3>Trasa i pozycja</h3></div><button id="centerMapBtn" class="small-button">Pokaż aktywny punkt</button></div>
+      <div class="map-frame" id="mapFrame" role="img" aria-label="Schematyczna mapa trasy Malbork">
+        <svg id="routeMap" viewBox="0 0 1000 640" aria-hidden="true"></svg>
+        <div class="map-compass" aria-hidden="true">N</div>
+      </div>
+      <div class="map-legend"><span><i class="legend-dot pending"></i>Plan</span><span><i class="legend-dot active"></i>Aktywny</span><span><i class="legend-dot completed"></i>Ukończony</span><span><i class="legend-dot user"></i>Pozycja</span></div>
+      <p id="mapStatus" class="map-status">Mapa zostanie narysowana po wczytaniu projektu.</p>
+    </section>
+    <section class="card audio-guidance"><div class="section-heading"><div><p class="eyebrow">Prowadzenie głosowe</p><h3>Komunikaty nawigacyjne</h3></div><button id="audioGuidanceBtn" class="small-button">Wyłącz prowadzenie głosowe</button></div><p id="audioGuidanceStatus">Prowadzenie głosowe jest włączone. Komunikaty krytyczne mają pierwszeństwo przed narracją.</p></section>
+    <section class="card"><h3>Wskazówka</h3><p id="instruction">Po uruchomieniu wyprawy aplikacja będzie prowadzić do kolejnych punktów.</p><div class="button-grid"><button id="startBtn" class="primary">Rozpocznij wyprawę</button><button id="narrateBtn">Odtwórz komunikat</button><button id="manualBtn">Potwierdź punkt</button><button id="pauseBtn">Wstrzymaj</button></div></section>
+    <section class="card"><h3>Punkty trasy</h3><ol id="stageList" class="stage-list"></ol></section>
+    <details class="card emergency"><summary>Opcje awaryjne</summary><p>Decyzje są zapisywane lokalnie w historii sesji.</p><div class="button-grid"><button id="skipBtn">Pomiń bieżący punkt</button><button id="returnBtn" class="danger">Rozpocznij powrót</button><button id="resetBtn">Wyzeruj sesję</button></div></details>
+
+    <section class="card compact">
+      <strong>Test telefonu</strong>
+      <a href="phone-test.html">Otwórz protokół testowy</a>
+    </section>
+    <section class="card compact"><strong>Stan GPS</strong><span id="gpsStatus">Nieuruchomiony</span></section>
+  </main>
+  <footer>Projekt Malbork 1.7.0 · PWA 2.3.0 · WYDANIE TERENOWE</footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

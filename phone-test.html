@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#24352f">
+  <title>Test telefonu · Malbork 2026</title>
+  <link rel="icon" href="icon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="phone-test.css">
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">Wydanie terenowe 2.3.0</p>
+      <h1>Test telefonu</h1>
+    </div>
+    <a class="test-back" href="index.html">Aplikacja</a>
+  </header>
+
+  <main class="phone-test-main">
+    <section class="card">
+      <p class="eyebrow">Urządzenie</p>
+      <h2>Metryka testu</h2>
+      <div class="test-form-grid">
+        <label>Model telefonu<input id="deviceModel" autocomplete="off"></label>
+        <label>Wersja Androida<input id="androidVersion" autocomplete="off"></label>
+        <label>Wersja Chrome<input id="chromeVersion" autocomplete="off"></label>
+        <label>Data testu<input id="testDate" type="date"></label>
+      </div>
+      <p id="environmentStatus" class="test-environment"></p>
+    </section>
+
+    <section class="card">
+      <div class="section-heading">
+        <div><p class="eyebrow">Postęp</p><h2 id="overallTitle">Test nieukończony</h2></div>
+        <span id="overallScore" class="readiness-score">0/9</span>
+      </div>
+      <div class="test-progress"><span id="progressBar"></span></div>
+      <p id="criticalStatus">Testy krytyczne: oczekują.</p>
+    </section>
+
+    <div id="testList"></div>
+
+    <section class="card">
+      <p class="eyebrow">Podsumowanie</p>
+      <h2>Decyzja końcowa</h2>
+      <textarea id="limitations" rows="4" placeholder="Zaobserwowane ograniczenia lub uwagi"></textarea>
+      <div class="decision-grid">
+        <button data-decision="GO">GO</button>
+        <button data-decision="GO WITH LIMITATION">GO WITH LIMITATION</button>
+        <button data-decision="NO-GO" class="danger">NO-GO</button>
+      </div>
+      <p id="decisionStatus">Decyzja nie została wybrana.</p>
+      <div class="button-grid">
+        <button id="downloadReportBtn" class="primary">Pobierz raport JSON</button>
+        <button id="copyReportBtn">Kopiuj podsumowanie</button>
+        <button id="resetTestBtn">Wyzeruj test</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>Malbork 2026 · fizyczny test akceptacyjny telefonu</footer>
+  <script type="module" src="phone-test.js"></script>
+</body>
+</html>

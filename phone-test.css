@@ -1,0 +1,23 @@
+.phone-test-main { max-width: 860px; margin: 0 auto; }
+.test-back { color: inherit; text-decoration: none; border: 1px solid rgba(255,255,255,.35); padding: .7rem 1rem; border-radius: .8rem; }
+.test-form-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; }
+.test-form-grid label { display: grid; gap: .4rem; font-weight: 700; }
+.test-form-grid input, textarea { width: 100%; box-sizing: border-box; border: 1px solid #b7c1bc; border-radius: .75rem; padding: .85rem; font: inherit; background: #fff; color: #17231f; }
+.test-environment { padding: .8rem; background: #eef3f0; border-radius: .7rem; }
+.test-progress { height: .75rem; background: #d9e0dc; border-radius: 999px; overflow: hidden; }
+.test-progress span { display: block; height: 100%; width: 0; background: #37785f; transition: width .2s ease; }
+.test-card { margin-bottom: 1rem; }
+.test-card.pass { border-left: .4rem solid #2f7d57; }
+.test-card.fail { border-left: .4rem solid #a93636; }
+.test-card .test-meta { display: flex; gap: .6rem; align-items: center; flex-wrap: wrap; margin-bottom: .5rem; }
+.test-card .critical-badge { font-size: .78rem; padding: .2rem .5rem; border-radius: 999px; background: #fee9c7; }
+.test-card ol { padding-left: 1.3rem; }
+.test-result-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+.test-result-buttons button.selected-pass { background: #2f7d57; color: white; }
+.test-result-buttons button.selected-fail { background: #a93636; color: white; }
+.test-note { width: 100%; margin-top: .75rem; }
+.decision-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: .75rem; margin: 1rem 0; }
+.decision-grid button.selected { outline: 3px solid #17231f; }
+@media (max-width: 640px) {
+  .test-form-grid, .decision-grid { grid-template-columns: 1fr; }
+}
