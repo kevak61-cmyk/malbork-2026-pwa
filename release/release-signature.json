@@ -1,0 +1,10 @@
+{
+  "formatVersion": "1.0",
+  "algorithm": "Ed25519",
+  "signedObject": "manifest.json",
+  "manifestSha256": "f4af9599496322caf807baa5c0a7ea09d5de97ad6bef85845cd0840fce59fb16",
+  "signatureBase64": "JzUrR8lp3O0mu4Q4IGoVEvOP5u+9pecv/GnhbVITHkl0tDHd/0slYQX2RKo6qw7vco6VQoVNoWvQNMRnuh+2Bw==",
+  "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEALkKnnG2xwsbWptgl214EtPceG4PjroPJTmEmzjxWNoU=\n-----END PUBLIC KEY-----\n",
+  "signedAt": "2026-07-21T13:04:45.676Z",
+  "publisher": "Photo Expedition Platform"
+}

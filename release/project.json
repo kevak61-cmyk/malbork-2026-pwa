@@ -1,0 +1,610 @@
+{
+  "metadata": {
+    "projectId": "malbork-2026",
+    "title": "Malbork – fotograficzna wyprawa",
+    "version": "1.7.0",
+    "formatVersion": "1.1",
+    "language": "pl",
+    "author": "Olgierd Lewandowski",
+    "status": "Published",
+    "modified": "2026-07-21",
+    "publishedAt": "2026-07-21T13:30:00+02:00",
+    "releaseNotes": "Pierwsze podpisane wydanie RELEASE projektu referencyjnego Malbork."
+  },
+  "settings": {
+    "defaultActivationRadiusMeters": 25,
+    "units": "metric"
+  },
+  "schedule": {
+    "date": "2026-07-26",
+    "timezone": "Europe/Warsaw",
+    "arrivalTime": "10:45",
+    "trainDepartureTime": "20:10",
+    "mustBeInTrainBy": "19:55",
+    "hardReturnDeadline": true,
+    "lunch": {
+      "stageId": "piwniczka",
+      "minimumDurationMinutes": 60,
+      "mayShortenOnlyInEmergency": true
+    },
+    "emergencyPolicy": {
+      "warningThresholdMinutes": 60,
+      "criticalThresholdMinutes": 30,
+      "mandatoryReturnThresholdMinutes": 30,
+      "returnStageId": "dworzec_powrot",
+      "protectedStageIds": [
+        "piwniczka"
+      ],
+      "principle": "RECOMMEND_ONLY"
+    }
+  },
+  "route": {
+    "startStageId": "dworzec_pkp",
+    "endStageId": "dworzec_powrot",
+    "estimatedDurationMinutes": 550,
+    "estimatedDistanceMeters": 7600,
+    "transport": "walking",
+    "constraints": {
+      "returnAfterStageId": "kaldowo",
+      "removedStages": [
+        "szpital_jerozolimski",
+        "punkt_11_dodatkowy",
+        "punkt_12_dodatkowy"
+      ],
+      "doNotShortenLunchExceptEmergency": true,
+      "userStageCount": 10
+    }
+  },
+  "stages": [
+    {
+      "id": "dworzec_pkp",
+      "order": 1,
+      "displayOrder": 1,
+      "visibility": "USER",
+      "category": "START",
+      "name": "Dworzec PKP Malbork",
+      "geometry": {
+        "latitude": 54.036222,
+        "longitude": 19.041639
+      },
+      "activation": {
+        "radiusMeters": 35,
+        "policy": "MANUAL",
+        "dwellTimeSeconds": 0,
+        "maxAccuracyMeters": 50
+      },
+      "experience": {
+        "title": "Start wyprawy",
+        "shortDescription": "Dworzec PKP Malbork",
+        "narrationId": "nar_001",
+        "instruction": "Po wyjściu z dworca kieruj się do Bramy Garncarskiej."
+      },
+      "navigation": {
+        "nextStageId": "brama_garncarska"
+      },
+      "schedule": {
+        "earliestStart": "10:45",
+        "latestEnd": "11:05"
+      },
+      "verification": {
+        "status": "DESK_VERIFIED",
+        "coordinateSource": "MALBORK_2026_ETAPY_1-11_V7_SVG",
+        "fieldVerificationRequired": true,
+        "verifiedAt": "2026-07-21"
+      },
+      "recoveryPolicy": {
+        "mode": "FIXED",
+        "maximumReductionMinutes": 0,
+        "skipAllowed": false
+      }
+    },
+    {
+      "id": "brama_garncarska",
+      "order": 2,
+      "displayOrder": 2,
+      "visibility": "USER",
+      "category": "LANDMARK",
+      "name": "Brama Garncarska",
+      "geometry": {
+        "latitude": 54.036914,
+        "longitude": 19.028262
+      },
+      "activation": {
+        "radiusMeters": 25,
+        "policy": "FIRST_ENTRY",
+        "dwellTimeSeconds": 4,
+        "maxAccuracyMeters": 35
+      },
+      "experience": {
+        "title": "Brama Garncarska",
+        "shortDescription": "Brama Garncarska",
+        "narrationId": "nar_002",
+        "instruction": "Po sesji przejdź do Ratusza Staromiejskiego."
+      },
+      "navigation": {
+        "nextStageId": "ratusz_staromiejski"
+      },
+      "schedule": {
+        "earliestStart": "11:10",
+        "latestEnd": "11:35"
+      },
+      "verification": {
+        "status": "DESK_VERIFIED",
+        "coordinateSource": "MALBORK_2026_ETAPY_1-11_V7_SVG",
+        "fieldVerificationRequired": true,
+        "verifiedAt": "2026-07-21"
+      },
+      "recoveryPolicy": {
+        "mode": "REDUCIBLE",
+        "maximumReductionMinutes": 10,
+        "skipAllowed": false
+      }
+    },
+    {
+      "id": "ratusz_staromiejski",
+      "order": 3,
+      "displayOrder": 3,
+      "visibility": "USER",
+      "category": "LANDMARK",
+      "name": "Ratusz Staromiejski",
+      "geometry": {
+        "latitude": 54.037027,
+        "longitude": 19.026365
+      },
+      "activation": {
+        "radiusMeters": 25,
+        "policy": "FIRST_ENTRY",
+        "dwellTimeSeconds": 4,
+        "maxAccuracyMeters": 35
+      },
+      "experience": {
+        "title": "Ratusz Staromiejski",
+        "shortDescription": "Ratusz Staromiejski",
+        "narrationId": "nar_003",
+        "instruction": "Po wykonaniu zdjęć przejdź do kościoła św. Jana Chrzciciela."
+      },
+      "navigation": {
+        "nextStageId": "kosciol_sw_jana"
+      },
+      "schedule": {
+        "earliestStart": "11:35",
+        "latestEnd": "12:00"
+      },
+      "verification": {
+        "status": "DESK_VERIFIED",
+        "coordinateSource": "MALBORK_2026_ETAPY_1-11_V7_SVG",
+        "fieldVerificationRequired": true,
+        "verifiedAt": "2026-07-21"
+      },
+      "recoveryPolicy": {
+        "mode": "REDUCIBLE",
+        "maximumReductionMinutes": 10,
+        "skipAllowed": false
+      }
+    },
+    {
+      "id": "kosciol_sw_jana",
+      "order": 4,
+      "displayOrder": 4,
+      "visibility": "USER",
+      "category": "LANDMARK",
+      "name": "Kościół św. Jana Chrzciciela",
+      "geometry": {
+        "latitude": 54.038543,
+        "longitude": 19.026468
+      },
+      "activation": {
+        "radiusMeters": 25,
+        "policy": "FIRST_ENTRY",
+        "dwellTimeSeconds": 4,
+        "maxAccuracyMeters": 35
+      },
+      "experience": {
+        "title": "Kościół św. Jana Chrzciciela",
+        "shortDescription": "Kościół św. Jana Chrzciciela",
+        "narrationId": "nar_004",
+        "instruction": "Następnie skieruj się do Szkoły Łacińskiej."
+      },
+      "navigation": {
+        "nextStageId": "szkola_lacinska"
+      },
+      "schedule": {
+        "earliestStart": "12:00",
+        "latestEnd": "12:25"
+      },
+      "verification": {
+        "status": "DESK_VERIFIED",
+        "coordinateSource": "MALBORK_2026_ETAPY_1-11_V7_SVG",
+        "fieldVerificationRequired": true,
+        "verifiedAt": "2026-07-21"
+      },
+      "recoveryPolicy": {
+        "mode": "REDUCIBLE",
+        "maximumReductionMinutes": 10,
+        "skipAllowed": false
+      }
+    },
+    {
+      "id": "szkola_lacinska",
+      "order": 5,
+      "displayOrder": 5,
+      "visibility": "USER",
+      "category": "LANDMARK",
+      "name": "Szkoła Łacińska",
+      "geometry": {
+        "latitude": 54.037735,
+        "longitude": 19.025142
+      },
+      "activation": {
+        "radiusMeters": 25,
+        "policy": "FIRST_ENTRY",
+        "dwellTimeSeconds": 4,
+        "maxAccuracyMeters": 35
+      },
+      "experience": {
+        "title": "Szkoła Łacińska",
+        "shortDescription": "Szkoła Łacińska",
+        "narrationId": "nar_005",
+        "instruction": "Po sesji przejdź do wejścia Muzeum Zamkowego."
+      },
+      "navigation": {
+        "nextStageId": "muzeum_wejscie"
+      },
+      "schedule": {
+        "earliestStart": "12:25",
+        "latestEnd": "12:50"
+      },
+      "verification": {
+        "status": "DESK_VERIFIED",
+        "coordinateSource": "MALBORK_2026_ETAPY_1-11_V7_SVG",
+        "fieldVerificationRequired": true,
+        "verifiedAt": "2026-07-21"
+      },
+      "recoveryPolicy": {
+        "mode": "REDUCIBLE",
+        "maximumReductionMinutes": 10,
+        "skipAllowed": false
+      }
+    },
+    {
+      "id": "muzeum_wejscie",
+      "order": 6,
+      "displayOrder": 6,
+      "visibility": "USER",
+      "category": "LANDMARK",
+      "name": "Wejście do Muzeum Zamkowego",
+      "geometry": {
+        "latitude": 54.039722,
+        "longitude": 19.027778
+      },
+      "activation": {
+        "radiusMeters": 35,
+        "policy": "FIRST_ENTRY",
+        "dwellTimeSeconds": 5,
+        "maxAccuracyMeters": 35
+      },
+      "experience": {
+        "title": "Wejście do zamku",
+        "shortDescription": "Wejście do Muzeum Zamkowego",
+        "narrationId": "nar_006",
+        "instruction": "Rozpocznij zwiedzanie. Wewnątrz korzystaj z muzealnego audioprzewodnika."
+      },
+      "navigation": {
+        "nextStageId": "zamek_wnetrza"
+      },
+      "schedule": {
+        "earliestStart": "12:50",
+        "latestEnd": "13:05"
+      },
+      "verification": {
+        "status": "DESK_VERIFIED",
+        "coordinateSource": "MALBORK_2026_ETAPY_1-11_V7_SVG",
+        "fieldVerificationRequired": true,
+        "verifiedAt": "2026-07-21"
+      },
+      "recoveryPolicy": {
+        "mode": "FIXED",
+        "maximumReductionMinutes": 0,
+        "skipAllowed": false
+      }
+    },
+    {
+      "id": "zamek_wnetrza",
+      "order": 7,
+      "displayOrder": 7,
+      "visibility": "USER",
+      "category": "LANDMARK",
+      "name": "Wnętrza i dziedzińce zamku",
+      "geometry": {
+        "latitude": 54.0402,
+        "longitude": 19.028
+      },
+      "activation": {
+        "radiusMeters": 40,
+        "policy": "MANUAL",
+        "dwellTimeSeconds": 0,
+        "maxAccuracyMeters": 50
+      },
+      "experience": {
+        "title": "Zwiedzanie zamku",
+        "shortDescription": "Wnętrza i dziedzińce zamku",
+        "narrationId": "nar_007",
+        "instruction": "Po wyjściu ręcznie wznów wyprawę; aplikacja skieruje cię do Piwniczki."
+      },
+      "navigation": {
+        "nextStageId": "piwniczka"
+      },
+      "schedule": {
+        "earliestStart": "13:05",
+        "latestEnd": "15:10"
+      },
+      "verification": {
+        "status": "DESK_VERIFIED",
+        "coordinateSource": "MALBORK_2026_ETAPY_1-11_V7_SVG",
+        "fieldVerificationRequired": true,
+        "verifiedAt": "2026-07-21"
+      },
+      "recoveryPolicy": {
+        "mode": "REDUCIBLE",
+        "maximumReductionMinutes": 30,
+        "skipAllowed": false
+      }
+    },
+    {
+      "id": "piwniczka",
+      "order": 8,
+      "displayOrder": 8,
+      "visibility": "USER",
+      "category": "FOOD",
+      "name": "Restauracja Piwniczka",
+      "geometry": {
+        "latitude": 54.0408962,
+        "longitude": 19.0286575
+      },
+      "activation": {
+        "radiusMeters": 30,
+        "policy": "FIRST_ENTRY",
+        "dwellTimeSeconds": 5,
+        "maxAccuracyMeters": 35
+      },
+      "experience": {
+        "title": "Obiad i odpoczynek",
+        "shortDescription": "Restauracja Piwniczka",
+        "narrationId": "nar_008",
+        "instruction": "Po odpoczynku przejdź w stronę Mostu św. Wojciecha."
+      },
+      "navigation": {
+        "nextStageId": "most_sw_wojciecha"
+      },
+      "schedule": {
+        "earliestStart": "15:10",
+        "latestEnd": "16:15"
+      },
+      "verification": {
+        "status": "DESK_VERIFIED",
+        "coordinateSource": "MALBORK_2026_ETAPY_1-11_V7_SVG",
+        "fieldVerificationRequired": true,
+        "verifiedAt": "2026-07-21"
+      },
+      "recoveryPolicy": {
+        "mode": "PROTECTED",
+        "maximumReductionMinutes": 0,
+        "skipAllowed": false
+      }
+    },
+    {
+      "id": "most_sw_wojciecha",
+      "order": 9,
+      "displayOrder": 9,
+      "visibility": "USER",
+      "category": "TRANSPORT",
+      "name": "Most św. Wojciecha",
+      "geometry": {
+        "latitude": 54.041667,
+        "longitude": 19.026111
+      },
+      "activation": {
+        "radiusMeters": 30,
+        "policy": "FIRST_ENTRY",
+        "dwellTimeSeconds": 4,
+        "maxAccuracyMeters": 35
+      },
+      "experience": {
+        "title": "Przejście na Kałdowo",
+        "shortDescription": "Most św. Wojciecha",
+        "narrationId": "nar_009",
+        "instruction": "Przejdź na zachodni brzeg Nogatu i skieruj się do punktu widokowego."
+      },
+      "navigation": {
+        "nextStageId": "kaldowo"
+      },
+      "schedule": {
+        "earliestStart": "16:20",
+        "latestEnd": "16:35"
+      },
+      "verification": {
+        "status": "DESK_VERIFIED",
+        "coordinateSource": "MALBORK_2026_ETAPY_1-11_V7_SVG",
+        "fieldVerificationRequired": true,
+        "verifiedAt": "2026-07-21"
+      },
+      "recoveryPolicy": {
+        "mode": "SKIPPABLE",
+        "maximumReductionMinutes": 10,
+        "skipAllowed": true
+      }
+    },
+    {
+      "id": "kaldowo",
+      "order": 10,
+      "displayOrder": 10,
+      "visibility": "USER",
+      "category": "VIEWPOINT",
+      "name": "Kałdowo – punkt widokowy",
+      "geometry": {
+        "latitude": 54.041394,
+        "longitude": 19.024416
+      },
+      "activation": {
+        "radiusMeters": 40,
+        "policy": "FIRST_ENTRY",
+        "dwellTimeSeconds": 5,
+        "maxAccuracyMeters": 35
+      },
+      "experience": {
+        "title": "Kałdowo",
+        "shortDescription": "Kałdowo – punkt widokowy",
+        "narrationId": "nar_010",
+        "instruction": "Wykonaj rekonesans, opuść punkt, a następnie wróć na sesję finałową. Po drugim wejściu rozpocznij powrót na dworzec."
+      },
+      "navigation": {
+        "nextStageId": "dworzec_powrot"
+      },
+      "schedule": {
+        "earliestStart": "16:35",
+        "latestEnd": "19:25"
+      },
+      "verification": {
+        "status": "DESK_VERIFIED",
+        "coordinateSource": "MALBORK_2026_ETAPY_1-11_V7_SVG",
+        "fieldVerificationRequired": true,
+        "verifiedAt": "2026-07-21"
+      },
+      "visitPlan": {
+        "requiredVisits": 2,
+        "windows": [
+          {
+            "label": "rekonesans",
+            "earliestStart": "16:35",
+            "latestEnd": "17:05",
+            "purpose": "Krótka pierwsza sesja i ocena kadrów.",
+            "narrationId": "nar_010_rekonesans",
+            "instruction": "Po krótkim rekonesansie opuść strefę punktu. Wróć tu w oknie sesji finałowej."
+          },
+          {
+            "label": "sesja_finałowa",
+            "earliestStart": "18:05",
+            "latestEnd": "19:25",
+            "purpose": "Główna sesja przy późniejszym świetle.",
+            "narrationId": "nar_010_final",
+            "instruction": "Po zakończeniu sesji finałowej rozpocznij powrót na dworzec."
+          }
+        ]
+      },
+      "recoveryPolicy": {
+        "mode": "REDUCIBLE",
+        "maximumReductionMinutes": 20,
+        "skipAllowed": false
+      }
+    },
+    {
+      "id": "dworzec_powrot",
+      "order": 11,
+      "displayOrder": null,
+      "visibility": "SYSTEM",
+      "category": "END",
+      "name": "Dworzec PKP Malbork – zakończenie",
+      "geometry": {
+        "latitude": 54.036222,
+        "longitude": 19.041639
+      },
+      "activation": {
+        "radiusMeters": 50,
+        "policy": "FIRST_ENTRY",
+        "dwellTimeSeconds": 3,
+        "maxAccuracyMeters": 50
+      },
+      "experience": {
+        "title": "Zakończenie wyprawy",
+        "shortDescription": "Dworzec PKP Malbork – zakończenie",
+        "narrationId": "nar_011",
+        "instruction": "Najpóźniej o 19:55 znajdź się w wagonie."
+      },
+      "navigation": {
+        "nextStageId": null
+      },
+      "schedule": {
+        "earliestStart": "19:35",
+        "latestEnd": "19:55"
+      },
+      "verification": {
+        "status": "DESK_VERIFIED",
+        "coordinateSource": "MALBORK_2026_ETAPY_1-11_V7_SVG",
+        "fieldVerificationRequired": true,
+        "verifiedAt": "2026-07-21"
+      },
+      "recoveryPolicy": {
+        "mode": "RETURN_ONLY",
+        "maximumReductionMinutes": 0,
+        "skipAllowed": false
+      }
+    }
+  ],
+  "narrations": [
+    {
+      "id": "nar_001",
+      "textFile": "narration/nar_001.txt",
+      "language": "pl"
+    },
+    {
+      "id": "nar_002",
+      "textFile": "narration/nar_002.txt",
+      "language": "pl"
+    },
+    {
+      "id": "nar_003",
+      "textFile": "narration/nar_003.txt",
+      "language": "pl"
+    },
+    {
+      "id": "nar_004",
+      "textFile": "narration/nar_004.txt",
+      "language": "pl"
+    },
+    {
+      "id": "nar_005",
+      "textFile": "narration/nar_005.txt",
+      "language": "pl"
+    },
+    {
+      "id": "nar_006",
+      "textFile": "narration/nar_006.txt",
+      "language": "pl"
+    },
+    {
+      "id": "nar_007",
+      "textFile": "narration/nar_007.txt",
+      "language": "pl"
+    },
+    {
+      "id": "nar_008",
+      "textFile": "narration/nar_008.txt",
+      "language": "pl"
+    },
+    {
+      "id": "nar_009",
+      "textFile": "narration/nar_009.txt",
+      "language": "pl"
+    },
+    {
+      "id": "nar_010",
+      "textFile": "narration/nar_010.txt",
+      "language": "pl"
+    },
+    {
+      "id": "nar_011",
+      "textFile": "narration/nar_011.txt",
+      "language": "pl"
+    },
+    {
+      "id": "nar_010_rekonesans",
+      "textFile": "narration/nar_010_rekonesans.txt",
+      "language": "pl"
+    },
+    {
+      "id": "nar_010_final",
+      "textFile": "narration/nar_010_final.txt",
+      "language": "pl"
+    }
+  ]
+}

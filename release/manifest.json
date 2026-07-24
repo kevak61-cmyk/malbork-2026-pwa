@@ -1,0 +1,84 @@
+{
+  "formatVersion": "1.0",
+  "packageType": "PHOTO_EXPEDITION_PROJECT",
+  "mode": "RELEASE",
+  "projectId": "malbork-2026",
+  "projectVersion": "1.7.0",
+  "projectFormatVersion": "1.1",
+  "createdAt": "2026-07-21T13:04:45.676Z",
+  "entryPoint": "project.json",
+  "fileCount": 14,
+  "totalBytes": 18288,
+  "files": [
+    {
+      "path": "narration/nar_001.txt",
+      "sizeBytes": 104,
+      "sha256": "c1ad3c32c9b4be581b1166fb813fc84c1452b2f802bbc703d89d5c581e633307"
+    },
+    {
+      "path": "narration/nar_002.txt",
+      "sizeBytes": 92,
+      "sha256": "8ced46145d0dcb8ba940bc72755cfbdc26e7c4c8e0949cd7a779a202f83509a3"
+    },
+    {
+      "path": "narration/nar_003.txt",
+      "sizeBytes": 98,
+      "sha256": "8913416107468fb639e48c0e7e8fc76da6c580012d78ff57ca84d83e2f8b4fbd"
+    },
+    {
+      "path": "narration/nar_004.txt",
+      "sizeBytes": 85,
+      "sha256": "fc65ee7e43909e3cd59e8321047d4ed94aa7b4bc82c40bd775f5bac0bc7fc88e"
+    },
+    {
+      "path": "narration/nar_005.txt",
+      "sizeBytes": 96,
+      "sha256": "1986c73bcf0c2c4f16cb95e3d8684550cb418c599e011b5b573ada3919569720"
+    },
+    {
+      "path": "narration/nar_006.txt",
+      "sizeBytes": 101,
+      "sha256": "6d6918345b1460da50a359c15d1e7b0bf0e182b1777b2f04c5f91336d4b360e5"
+    },
+    {
+      "path": "narration/nar_007.txt",
+      "sizeBytes": 119,
+      "sha256": "43d6818d394a13594baf156ba91d8affbdc1fdd1c61b2b979413288b2016093e"
+    },
+    {
+      "path": "narration/nar_008.txt",
+      "sizeBytes": 104,
+      "sha256": "8b78ff3566182081a335107bfce4e576ea6fa4e064ae81e8099338b05507cbb5"
+    },
+    {
+      "path": "narration/nar_009.txt",
+      "sizeBytes": 104,
+      "sha256": "493d72b13fa7809782bf6d24a0be4c88e541f39678e1df0ec10b25848cd03b55"
+    },
+    {
+      "path": "narration/nar_010.txt",
+      "sizeBytes": 142,
+      "sha256": "a41205750773e8ecd1793df8f5d9e84c79d4cfd0f143527bca2c1b7c50e0d920"
+    },
+    {
+      "path": "narration/nar_010_final.txt",
+      "sizeBytes": 187,
+      "sha256": "0f4d9a02a3f086031b2fcc300c4757e14b3bc453462597decc626c82f2fc1cc0"
+    },
+    {
+      "path": "narration/nar_010_rekonesans.txt",
+      "sizeBytes": 189,
+      "sha256": "4efc4de8112d8a70429d6555d4a10be97a4d49140a51f21fffaf3c5640a7dfd8"
+    },
+    {
+      "path": "narration/nar_011.txt",
+      "sizeBytes": 119,
+      "sha256": "f7bf70c2cc08d3846d5fce09c48e433a41bdc675859494a904d8748d9c57b2b7"
+    },
+    {
+      "path": "project.json",
+      "sizeBytes": 16748,
+      "sha256": "049fbc265fb56e31361d34676464c27f614512b1b2b74d2e5e4792c5ea8aeeca"
+    }
+  ]
+}
